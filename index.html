@@ -1,144 +1,133 @@
 {\rtf1\ansi\ansicpg1252\cocoartf2707
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;\red187\green187\blue187;\red26\green28\blue32;}
+{\*\expandedcolortbl;;\cssrgb\c78039\c78039\c78039;\cssrgb\c13333\c14902\c16863;}
+\margl1440\margr1440\vieww20800\viewh11700\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
 
-\f0\fs24 \cf0 <!DOCTYPE html>\
+\f0\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 <!DOCTYPE html>\
 <html lang="en">\
 <head>\
-  <meta charset="UTF-8">\
-  <title>Stress & Craving Regulator</title>\
-  <style>\
-    body \{\
-      font-family: Arial, sans-serif;\
-      background: #f4f7fb;\
-      padding: 30px;\
-      max-width: 700px;\
-      margin: auto;\
-    \}\
-    h1 \{\
-      text-align: center;\
-    \}\
-    .box \{\
-      background: white;\
-      padding: 20px;\
-      border-radius: 10px;\
-      margin-top: 20px;\
-    \}\
-    button \{\
-      margin-top: 15px;\
-      padding: 10px 20px;\
-      font-size: 16px;\
-      cursor: pointer;\
-    \}\
-    .output \{\
-      margin-top: 20px;\
-      padding: 15px;\
-      background: #eef3ff;\
-      border-radius: 8px;\
-    \}\
-  </style>\
+    <meta charset="UTF-8">\
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\
+    <title>Physiology & Behavior: Feeding and Stress</title>\
+    <style>\
+        :root \{\
+            --primary: #2c3e50;\
+            --secondary: #e67e22;\
+            --accent: #27ae60;\
+            --bg: #f4f7f6;\
+            --text: #34495e;\
+            --white: #ffffff;\
+        \}\
+        body \{ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: var(--text); background-color: var(--bg); margin: 0; padding: 0; \}\
+        header \{ background: var(--primary); color: var(--white); padding: 2rem 1rem; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); \}\
+        nav \{ background: #34495e; color: white; padding: 0.5rem; text-align: center; position: sticky; top: 0; z-index: 100; \}\
+        nav a \{ color: white; margin: 0 15px; text-decoration: none; font-weight: bold; \}\
+        .container \{ max-width: 1000px; margin: 2rem auto; padding: 0 1rem; \}\
+        section \{ background: var(--white); padding: 2rem; margin-bottom: 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); \}\
+        h2 \{ color: var(--primary); border-bottom: 3px solid var(--secondary); padding-bottom: 0.5rem; \}\
+        h3 \{ color: var(--secondary); margin-top: 1.5rem; \}\
+        .grid \{ display: grid; grid-template-columns: 1fr 1fr; gap: 20px; \}\
+        .card \{ background: #f9f9f9; padding: 1.5rem; border-left: 5px solid var(--primary); border-radius: 4px; \}\
+        .citation \{ font-size: 0.8rem; color: #7f8c8d; vertical-align: super; font-weight: bold; \}\
+        footer \{ text-align: center; padding: 2rem; color: #7f8c8d; font-size: 0.9rem; \}\
+        @media (max-width: 768px) \{ .grid \{ grid-template-columns: 1fr; \} \}\
+    </style>\
 </head>\
-\
 <body>\
 \
-<h1>Stress & Craving Regulator</h1>\
+<header>\
+    <h1>Physiology of Energy & Stress</h1>\
+    <p>A Biological Reference for Hormones and Behavior</p>\
+</header>\
 \
-<div class="box">\
-  <label>Stress Level (1\'9610):</label><br>\
-  <input type="range" id="stress" min="1" max="10" value="5">\
-  <span id="stressVal">5</span>\
+<nav>\
+    <a href="#feeding">Energy Metabolism</a>\
+    <a href="#stress">Physiology of Stress</a>\
+    <a href="#development">Developmental Programming</a>\
+</nav>\
 \
-  <br><br>\
+<div class="container">\
 \
-  <label>Hunger Level (1\'9610):</label><br>\
-  <input type="range" id="hunger" min="1" max="10" value="5">\
-  <span id="hungerVal">5</span>\
+    <!-- ENERGY & FEEDING SECTION -->\
+    <section id="feeding">\
+        <h2>1. Energy Metabolism and Feeding Control</h2>\
+        <p>Energy needs are constant for maintenance and brain function (which uses 25% of total energy), but eating is <strong>episodic</strong> [1].</p>\
 \
-  <br><br>\
+        <div class="grid">\
+            <div class="card">\
+                <h3>Satiety Signals (Inhibitors)</h3>\
+                <ul>\
+                    <li><strong>CCK:</strong> Secreted during fat/protein meals; promotes satiety via the vagus nerve [2, 3].</li>\
+                    <li><strong>Amylin:</strong> Released with insulin; delays gastric emptying [2].</li>\
+                    <li><strong>PYY:</strong> Released from the ileum; inhibits NPY/AgRP neurons in the arcuate nucleus [4].</li>\
+                    <li><strong>Insulin:</strong> The sole hormone responsible for <strong>anabolic energy storage</strong> as glycogen and fat [5, 6].</li>\
+                    <li><strong>Leptin:</strong> Proportional to fat mass; suppresses appetite and supports reproduction [7, 8].</li>\
+                </ul>\
+            </div>\
+            <div class="card">\
+                <h3>Orexigenic Signals (Promoters)</h3>\
+                <ul>\
+                    <li><strong>Ghrelin:</strong> Peaks at scheduled meal times; stimulates NPY and opposes leptin [9].</li>\
+                    <li><strong>NPY:</strong> Potent stimulator of food seeking/hoarding [10].</li>\
+                    <li><strong>AgRP:</strong> Antagonizes melanocortin receptors to decrease metabolic expenditure [11].</li>\
+                    <li><strong>Orexin:</strong> Induces feeding while inhibiting sleep [12].</li>\
+                </ul>\
+            </div>\
+        </div>\
 \
-  <label>Craving Type:</label><br>\
-  <select id="craving">\
-    <option value="none">None</option>\
-    <option value="sweet">Sweet</option>\
-    <option value="salty">Salty</option>\
-  </select>\
+        <h3>Disordered Metabolism</h3>\
+        <p><strong>Obesity</strong> is characterized by a height-to-waist ratio exceeding 2:1 and is linked to central insulin insensitivity [13, 14]. <strong>Type 2 Diabetes</strong> involves failed insulin signaling, leading to hyperglycemia which is toxic to the nervous and circulatory systems [15, 16].</p>\
+    </section>\
 \
-  <br><br>\
+    <!-- STRESS SECTION -->\
+    <section id="stress">\
+        <h2>2. The Physiology of Stress</h2>\
+        <p>Stress is a <strong>state of threatened homeostasis</strong> where the body attempts to re-establish balance through allostasis [17, 18].</p>\
 \
-  <button onclick="analyze()">Get Recommendation</button>\
+        <div class="grid">\
+            <div class="card">\
+                <h3>SAM System (Rapid)</h3>\
+                <p>The <strong>Sympathetic Nervous System</strong> triggers the adrenal medulla to release <strong>epinephrine and norepinephrine</strong> within seconds [19, 20]. This facilitates "fight or flight" by rerouting blood to muscles and the brain [19, 20].</p>\
+            </div>\
+            <div class="card">\
+                <h3>HPA Axis (Slower)</h3>\
+                <p>The <strong>Hypothalamic-Pituitary-Adrenal</strong> axis releases <strong>Glucocorticoids (CORT)</strong> over minutes [20, 21]. It involves CRH from the hypothalamus and ACTH from the pituitary [20].</p>\
+            </div>\
+        </div>\
+\
+        <h3>General Adaptation Syndrome (GAS)</h3>\
+        <ul>\
+            <li><strong>Alarm:</strong> Initial stress response (hypertrophy of adrenals, shrunken thymus) [21, 22].</li>\
+            <li><strong>Resistance:</strong> The body adapts and symptoms of the alarm phase disappear [22].</li>\
+            <li><strong>Exhaustion:</strong> Prolonged exposure leads to stress pathology and death [22].</li>\
+        </ul>\
+\
+        <h3>Pathological Effects of Chronic Stress</h3>\
+        <p>When the stress response is not terminated efficiently, it leads to <strong>allostatic overload</strong> [23]. This can cause myopathy, infertility, cardiovascular disease (CVD), and <strong>hippocampal atrophy</strong> [24, 25].</p>\
+    </section>\
+\
+    <!-- DEVELOPMENT SECTION -->\
+    <section id="development">\
+        <h2>3. Developmental Programming & Epigenetics</h2>\
+        <p>Early life stressors can <strong>epigenetically program</strong> the brain, altering future coping mechanisms [26, 27].</p>\
+        \
+        <h3>The Methylation Mechanism</h3>\
+        <p>In rat pups, **inattentive maternal care** leads to high <strong>methylation</strong> of the glucocorticoid receptor (GR) gene, "switching it off" and resulting in a higher stress response in adulthood [27]. <strong>Maternal licking and grooming</strong> triggers serotonin release that leads to <strong>demethylation</strong>, allowing for more GR expression and a more relaxed adult [27].</p>\
+\
+        <h3>Prenatal Stress</h3>\
+        <p>Maternal glucocorticoids can cross the placenta and <strong>block male-typical neural sex circuit development</strong> by altering fetal testosterone surges [28]. This often leads to impaired male reproductive behaviors in adulthood [28].</p>\
+    </section>\
+\
 </div>\
 \
-<div class="output" id="output"></div>\
-\
-<script>\
-const stressSlider = document.getElementById("stress");\
-const hungerSlider = document.getElementById("hunger");\
-\
-stressSlider.oninput = () => \{\
-  document.getElementById("stressVal").innerText = stressSlider.value;\
-\};\
-\
-hungerSlider.oninput = () => \{\
-  document.getElementById("hungerVal").innerText = hungerSlider.value;\
-\};\
-\
-function analyze() \{\
-  const stress = parseInt(document.getElementById("stress").value);\
-  const hunger = parseInt(document.getElementById("hunger").value);\
-  const craving = document.getElementById("craving").value;\
-\
-  let result = "";\
-\
-  // Rule 1: Stress eating\
-  if (stress >= 7 && hunger <= 5 && craving === "sweet") \{\
-    result = `\
-      <strong>Recommendation:</strong> Try a 5-minute walk before eating.<br><br>\
-      <strong>What\'92s happening in your body:</strong><br>\
-      High stress activates the HPA axis, increasing cortisol. Cortisol can increase cravings for high-energy foods and promote fat storage. A short walk can help reduce cortisol and improve glucose regulation.<br><br>\
-      <strong>Why am I seeing this?</strong><br>\
-      You reported high stress but low hunger, which suggests stress-driven eating rather than true energy needs.\
-    `;\
-  \}\
-\
-  // Rule 2: True hunger\
-  else if (hunger >= 7 && stress <= 5) \{\
-    result = `\
-      <strong>Recommendation:</strong> Eat a balanced meal with protein, carbs, and healthy fats.<br><br>\
-      <strong>What\'92s happening in your body:</strong><br>\
-      High hunger signals increased ghrelin, which tells your body it needs energy. Eating restores blood glucose and promotes satiety through hormones like leptin and insulin.<br><br>\
-      <strong>Why am I seeing this?</strong><br>\
-      You reported high hunger with low stress, indicating physiological hunger rather than emotional eating.\
-    `;\
-  \}\
-\
-  // Rule 3: Mixed state\
-  else if (stress >= 6 && hunger >= 6) \{\
-    result = `\
-      <strong>Recommendation:</strong> Have a small balanced snack and eat slowly.<br><br>\
-      <strong>What\'92s happening in your body:</strong><br>\
-      Both cortisol and ghrelin may be elevated. This combination increases the risk of overeating calorie-dense foods. A balanced snack helps stabilize blood sugar and reduce further cravings.<br><br>\
-      <strong>Why am I seeing this?</strong><br>\
-      You reported both high stress and hunger, which can lead to combined emotional and physiological eating.\
-    `;\
-  \}\
-\
-  // Default\
-  else \{\
-    result = `\
-      <strong>Recommendation:</strong> Check in with your body before eating.<br><br>\
-      <strong>What\'92s happening in your body:</strong><br>\
-      Your signals are moderate. Taking a moment to assess hunger and stress can help prevent unnecessary eating.<br><br>\
-      <strong>Why am I seeing this?</strong><br>\
-      Your inputs do not strongly indicate stress-driven or biological hunger patterns.\
-    `;\
-  \}\
-\
-  document.getElementById("output").innerHTML = result;\
-\}\
-</script>\
+<footer>\
+    <p>Source Material: H&B Feed End, L1 Feed, Stress Parts 1-3. &copy; 2026 Academic Summary Web App.</p>\
+</footer>\
 \
 </body>\
-</html>}
+</html>\
+}
