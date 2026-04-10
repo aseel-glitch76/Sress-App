@@ -12,122 +12,205 @@
 <head>\
     <meta charset="UTF-8">\
     <meta name="viewport" content="width=device-width, initial-scale=1.0">\
-    <title>Physiology & Behavior: Feeding and Stress</title>\
+    <title>Stress & Eating Behaviour Regulator</title>\
     <style>\
         :root \{\
             --primary: #2c3e50;\
-            --secondary: #e67e22;\
-            --accent: #27ae60;\
-            --bg: #f4f7f6;\
-            --text: #34495e;\
+            --secondary: #34495e;\
+            --accent: #e67e22;\
+            --bg: #ecf0f1;\
             --white: #ffffff;\
+            --rule1: #e74c3c; /* Stress Red */\
+            --rule2: #27ae60; /* Hunger Green */\
+            --rule3: #f39c12; /* Mixed Orange */\
         \}\
-        body \{ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: var(--text); background-color: var(--bg); margin: 0; padding: 0; \}\
-        header \{ background: var(--primary); color: var(--white); padding: 2rem 1rem; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); \}\
-        nav \{ background: #34495e; color: white; padding: 0.5rem; text-align: center; position: sticky; top: 0; z-index: 100; \}\
-        nav a \{ color: white; margin: 0 15px; text-decoration: none; font-weight: bold; \}\
-        .container \{ max-width: 1000px; margin: 2rem auto; padding: 0 1rem; \}\
-        section \{ background: var(--white); padding: 2rem; margin-bottom: 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); \}\
-        h2 \{ color: var(--primary); border-bottom: 3px solid var(--secondary); padding-bottom: 0.5rem; \}\
-        h3 \{ color: var(--secondary); margin-top: 1.5rem; \}\
-        .grid \{ display: grid; grid-template-columns: 1fr 1fr; gap: 20px; \}\
-        .card \{ background: #f9f9f9; padding: 1.5rem; border-left: 5px solid var(--primary); border-radius: 4px; \}\
-        .citation \{ font-size: 0.8rem; color: #7f8c8d; vertical-align: super; font-weight: bold; \}\
-        footer \{ text-align: center; padding: 2rem; color: #7f8c8d; font-size: 0.9rem; \}\
-        @media (max-width: 768px) \{ .grid \{ grid-template-columns: 1fr; \} \}\
+        body \{ font-family: 'Segoe UI', Arial, sans-serif; background-color: var(--bg); color: #333; line-height: 1.6; margin: 0; padding: 20px; \}\
+        .container \{ max-width: 900px; margin: auto; background: var(--white); padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); \}\
+        header \{ text-align: center; border-bottom: 2px solid var(--accent); margin-bottom: 30px; padding-bottom: 10px; \}\
+        h1 \{ color: var(--primary); margin: 0; \}\
+        .input-group \{ margin-bottom: 20px; padding: 15px; border: 1px solid #ddd; border-radius: 8px; \}\
+        label \{ font-weight: bold; display: block; margin-bottom: 5px; \}\
+        input[type="range"] \{ width: 100%; cursor: pointer; \}\
+        select \{ width: 100%; padding: 10px; border-radius: 4px; border: 1px solid #ccc; \}\
+        button \{ width: 100%; padding: 15px; background: var(--primary); color: white; border: none; border-radius: 8px; font-size: 1.1rem; font-weight: bold; cursor: pointer; transition: background 0.3s; \}\
+        button:hover \{ background: var(--accent); \}\
+        \
+        #output \{ margin-top: 30px; display: none; \}\
+        .result-card \{ padding: 20px; border-left: 8px solid var(--primary); background: #f9f9f9; margin-bottom: 20px; \}\
+        .mechanism-chain \{ background: #eee; padding: 15px; border-radius: 8px; font-size: 0.9rem; \}\
+        .chain-step \{ display: inline-block; padding: 5px 10px; background: var(--secondary); color: white; border-radius: 4px; margin: 5px; \}\
+        \
+        .edu-section \{ margin-top: 40px; border-top: 2px solid #ddd; padding-top: 20px; \}\
+        .edu-grid \{ display: grid; grid-template-columns: 1fr 1fr; gap: 20px; \}\
+        .edu-card \{ background: #fdfdfd; padding: 15px; border: 1px solid #eee; border-radius: 8px; \}\
+        h3 \{ color: var(--accent); margin-top: 0; \}\
+        footer \{ text-align: center; margin-top: 30px; font-size: 0.8rem; color: #777; \}\
     </style>\
 </head>\
 <body>\
 \
-<header>\
-    <h1>Physiology of Energy & Stress</h1>\
-    <p>A Biological Reference for Hormones and Behavior</p>\
-</header>\
-\
-<nav>\
-    <a href="#feeding">Energy Metabolism</a>\
-    <a href="#stress">Physiology of Stress</a>\
-    <a href="#development">Developmental Programming</a>\
-</nav>\
-\
 <div class="container">\
+    <header>\
+        <h1>Stress & Eating Behaviour Regulator</h1>\
+        <p>University Behavioural Endocrinology Tool</p>\
+    </header>\
 \
-    <!-- ENERGY & FEEDING SECTION -->\
-    <section id="feeding">\
-        <h2>1. Energy Metabolism and Feeding Control</h2>\
-        <p>Energy needs are constant for maintenance and brain function (which uses 25% of total energy), but eating is <strong>episodic</strong> [1].</p>\
-\
-        <div class="grid">\
-            <div class="card">\
-                <h3>Satiety Signals (Inhibitors)</h3>\
-                <ul>\
-                    <li><strong>CCK:</strong> Secreted during fat/protein meals; promotes satiety via the vagus nerve [2, 3].</li>\
-                    <li><strong>Amylin:</strong> Released with insulin; delays gastric emptying [2].</li>\
-                    <li><strong>PYY:</strong> Released from the ileum; inhibits NPY/AgRP neurons in the arcuate nucleus [4].</li>\
-                    <li><strong>Insulin:</strong> The sole hormone responsible for <strong>anabolic energy storage</strong> as glycogen and fat [5, 6].</li>\
-                    <li><strong>Leptin:</strong> Proportional to fat mass; suppresses appetite and supports reproduction [7, 8].</li>\
-                </ul>\
-            </div>\
-            <div class="card">\
-                <h3>Orexigenic Signals (Promoters)</h3>\
-                <ul>\
-                    <li><strong>Ghrelin:</strong> Peaks at scheduled meal times; stimulates NPY and opposes leptin [9].</li>\
-                    <li><strong>NPY:</strong> Potent stimulator of food seeking/hoarding [10].</li>\
-                    <li><strong>AgRP:</strong> Antagonizes melanocortin receptors to decrease metabolic expenditure [11].</li>\
-                    <li><strong>Orexin:</strong> Induces feeding while inhibiting sleep [12].</li>\
-                </ul>\
-            </div>\
+    <!-- USER INPUT SECTION -->\
+    <section class="inputs">\
+        <div class="input-group">\
+            <label for="stress">Perceived Stress Level (1-10): <span id="stressVal">5</span></label>\
+            <input type="range" id="stress" min="1" max="10" value="5" oninput="document.getElementById('stressVal').innerText = this.value">\
         </div>\
 \
-        <h3>Disordered Metabolism</h3>\
-        <p><strong>Obesity</strong> is characterized by a height-to-waist ratio exceeding 2:1 and is linked to central insulin insensitivity [13, 14]. <strong>Type 2 Diabetes</strong> involves failed insulin signaling, leading to hyperglycemia which is toxic to the nervous and circulatory systems [15, 16].</p>\
+        <div class="input-group">\
+            <label for="hunger">Physiological Hunger Level (1-10): <span id="hungerVal">5</span></label>\
+            <input type="range" id="hunger" min="1" max="10" value="5" oninput="document.getElementById('hungerVal').innerText = this.value">\
+        </div>\
+\
+        <div class="input-group">\
+            <label for="craving">Current Craving Type:</label>\
+            <select id="craving">\
+                <option value="none">None</option>\
+                <option value="sweet">Sweet / High Carb</option>\
+                <option value="salty">Salty / Savory</option>\
+            </select>\
+        </div>\
+\
+        <button onclick="analyzeState()">Analyze My State</button>\
     </section>\
 \
-    <!-- STRESS SECTION -->\
-    <section id="stress">\
-        <h2>2. The Physiology of Stress</h2>\
-        <p>Stress is a <strong>state of threatened homeostasis</strong> where the body attempts to re-establish balance through allostasis [17, 18].</p>\
+    <!-- OUTPUT SECTION -->\
+    <section id="output">\
+        <div id="resultCard" class="result-card">\
+            <h2 id="recTitle">Recommendation</h2>\
+            <p id="recText"></p>\
+            \
+            <h3>Biological Explanation</h3>\
+            <p id="bioExp"></p>\
+            \
+            <h3>Behaviour Change Logic</h3>\
+            <p id="behLogic"></p>\
 \
-        <div class="grid">\
-            <div class="card">\
-                <h3>SAM System (Rapid)</h3>\
-                <p>The <strong>Sympathetic Nervous System</strong> triggers the adrenal medulla to release <strong>epinephrine and norepinephrine</strong> within seconds [19, 20]. This facilitates "fight or flight" by rerouting blood to muscles and the brain [19, 20].</p>\
-            </div>\
-            <div class="card">\
-                <h3>HPA Axis (Slower)</h3>\
-                <p>The <strong>Hypothalamic-Pituitary-Adrenal</strong> axis releases <strong>Glucocorticoids (CORT)</strong> over minutes [20, 21]. It involves CRH from the hypothalamus and ACTH from the pituitary [20].</p>\
+            <div class="why-section">\
+                <h3>Why am I seeing this?</h3>\
+                <p id="whyText"></p>\
             </div>\
         </div>\
 \
-        <h3>General Adaptation Syndrome (GAS)</h3>\
-        <ul>\
-            <li><strong>Alarm:</strong> Initial stress response (hypertrophy of adrenals, shrunken thymus) [21, 22].</li>\
-            <li><strong>Resistance:</strong> The body adapts and symptoms of the alarm phase disappear [22].</li>\
-            <li><strong>Exhaustion:</strong> Prolonged exposure leads to stress pathology and death [22].</li>\
+        <h3>What\'92s happening in your body? (Mechanism Chain)</h3>\
+        <div id="mechanismChain" class="mechanism-chain"></div>\
+    </section>\
+\
+    <!-- EDUCATIONAL CONTENT -->\
+    <section class="edu-section">\
+        <h2>Learn More About Your Body</h2>\
+        <div class="edu-grid">\
+            <div class="edu-card">\
+                <h3>HPA Axis & Cortisol</h3>\
+                <p>Stress triggers the Hypothalamic-Pituitary-Adrenal (HPA) axis, releasing Cortisol (CORT). CORT mobilizes glucose for "fight or flight" but also increases cravings for high-energy foods [1, 2].</p>\
+            </div>\
+            <div class="edu-card">\
+                <h3>Leptin vs. Ghrelin</h3>\
+                <p>Ghrelin is an orexigenic peptide released by the stomach to signal energy needs. Leptin, produced by fat cells, is an anorexigenic signal that promotes satiety [3, 4].</p>\
+            </div>\
+            <div class="edu-card">\
+                <h3>Insulin Resistance</h3>\
+                <p>Insulin is the sole hormone for energy storage. Chronic stress or high-sugar intake can lead to insulin insensitivity, contributing to metabolic disorders and hyperphagia [4, 5].</p>\
+            </div>\
+            <div class="edu-card">\
+                <h3>The Stress-Eating Link</h3>\
+                <p>CORT inhibits the CRH feedback loop, leading to cravings. Eating acts as a negative feedback mechanism on the HPA axis to cope with stress, but often leads to abdominal fat deposition [6, 7].</p>\
+            </div>\
+        </div>\
+    </section>\
+\
+    <section class="edu-section">\
+        <h3>Scientific References</h3>\
+        <ul style="font-size: 0.85rem;">\
+            <li>Selye, H. (1936). General Adaptation Syndrome. Nature. [8]</li>\
+            <li>Sapolsky, R. M. (2004). Why Zebras Don't Get Ulcers. [9]</li>\
+            <li>Kim & Diamond (2002). The definition of stress. [10]</li>\
+            <li>Artola et al. (2005). Diabetic Encephalopathy and LTP. [11]</li>\
         </ul>\
-\
-        <h3>Pathological Effects of Chronic Stress</h3>\
-        <p>When the stress response is not terminated efficiently, it leads to <strong>allostatic overload</strong> [23]. This can cause myopathy, infertility, cardiovascular disease (CVD), and <strong>hippocampal atrophy</strong> [24, 25].</p>\
     </section>\
 \
-    <!-- DEVELOPMENT SECTION -->\
-    <section id="development">\
-        <h2>3. Developmental Programming & Epigenetics</h2>\
-        <p>Early life stressors can <strong>epigenetically program</strong> the brain, altering future coping mechanisms [26, 27].</p>\
-        \
-        <h3>The Methylation Mechanism</h3>\
-        <p>In rat pups, **inattentive maternal care** leads to high <strong>methylation</strong> of the glucocorticoid receptor (GR) gene, "switching it off" and resulting in a higher stress response in adulthood [27]. <strong>Maternal licking and grooming</strong> triggers serotonin release that leads to <strong>demethylation</strong>, allowing for more GR expression and a more relaxed adult [27].</p>\
-\
-        <h3>Prenatal Stress</h3>\
-        <p>Maternal glucocorticoids can cross the placenta and <strong>block male-typical neural sex circuit development</strong> by altering fetal testosterone surges [28]. This often leads to impaired male reproductive behaviors in adulthood [28].</p>\
-    </section>\
-\
+    <footer>\
+        &copy; 2026 Behavioural Endocrinology Web App. Based on Academic Source Material.\
+    </footer>\
 </div>\
 \
-<footer>\
-    <p>Source Material: H&B Feed End, L1 Feed, Stress Parts 1-3. &copy; 2026 Academic Summary Web App.</p>\
-</footer>\
+<script>\
+    function analyzeState() \{\
+        const stress = parseInt(document.getElementById('stress').value);\
+        const hunger = parseInt(document.getElementById('hunger').value);\
+        const craving = document.getElementById('craving').value;\
+        const output = document.getElementById('output');\
+        const resCard = document.getElementById('resultCard');\
+        \
+        output.style.display = 'block';\
+        let rec = "", bio = "", logic = "", why = "", chain = [];\
+\
+        // RULE 1: STRESS-INDUCED EATING\
+        if (stress >= 7 && hunger <= 5 && craving === 'sweet') \{\
+            resCard.style.borderColor = "#e74c3c";\
+            rec = "Delay eating and take a 15-minute walk or practice deep breathing.";\
+            bio = "Your high stress has activated the HPA axis, increasing Glucocorticoids (Cortisol). Cortisol increases your motivation for 'hedonic' eating\'97specifically high-energy sweet foods\'97to provide quick fuel for a perceived threat that isn't actually physical [2, 6].";\
+            logic = "By performing a low-intensity physical activity (walking), you encourage the body to utilize the glucose mobilized by the stress response, helping to terminate the HPA activation and reducing CORT levels before you consume excess calories [1, 2].";\
+            why = "You entered High Stress (" + stress + ") with Low Hunger (" + hunger + "). This suggests your craving is emotional/hormonal rather than a true energy deficit.";\
+            chain = ["Stress Slider", "Emotional Sweet Craving", "Physical Activity Interruption", "Terminating CORT Surge", "Reduced Cravings", "Prevention of Abdominal Fat"];\
+        \} \
+        \
+        // RULE 2: PHYSIOLOGICAL HUNGER\
+        else if (hunger >= 7 && stress <= 5) \{\
+            resCard.style.borderColor = "#27ae60";\
+            rec = "Eat a balanced, high-protein meal now.";\
+            bio = "Your hunger is primarily physiological. Ghrelin levels have peaked, stimulating NPY neurons in your arcuate nucleus to increase your motivation to seek food [12, 13]. Since stress is low, your insulin signaling remains efficient.";\
+            logic = "Consuming a balanced meal will trigger satiety peptides like CCK and PYY, which inhibit NPY/AgRP and activate POMC neurons to signal fullness and restore energy homeostasis [13, 14].";\
+            why = "High Hunger (" + hunger + ") and Low Stress (" + stress + ") indicate a genuine nutrient deficiency. The goal is to restore blood glucose and trigger satiety hormones.";\
+            chain = ["Hunger Slider", "Energy Depletion", "Nutrient Ingestion", "Ghrelin Suppression / Insulin Release", "Satiety Signal Activation", "Maintained Homeostasis"];\
+        \}\
+\
+        // RULE 3: COMBINED STRESS + HUNGER\
+        else if (stress >= 6 && hunger >= 6) \{\
+            resCard.style.borderColor = "#f39c12";\
+            rec = "Consume a small, structured, mindful snack (e.g., nuts or fruit).";\
+            bio = "You are in a high-risk state where both Cortisol and Ghrelin are elevated. This 'dual-hit' significantly increases the risk of binge eating and hyperphagia because the satiety signals from insulin are being blunted by the stress response [3, 15].";\
+            logic = "A structured, mindful snack prevents the 'sugar crash' associated with high-glycemic foods. It helps stabilize insulin and provides a coping mechanism that doesn't lead to allostatic overload [15, 16].";\
+            why = "Both Stress (" + stress + ") and Hunger (" + hunger + ") are high. You need to address the energy need without letting stress-driven cravings dictate a massive caloric intake.";\
+            chain = ["Mixed State Inputs", "Potential Binge Behaviour", "Mindful Eating Technique", "Insulin Stabilization / NPY Modulation", "Reduced Rebound Hunger", "Lowered Allostatic Load"];\
+        \}\
+\
+        // DEFAULT CASE\
+        else \{\
+            resCard.style.borderColor = "#2c3e50";\
+            rec = "Maintain your current routine and stay hydrated.";\
+            bio = "Your system appears to be in a state of stable homeostasis. Your HPA axis is at basal levels, and your metabolic hormones (Ghrelin/Leptin) are balanced [9].";\
+            logic = "No immediate intervention is required to prevent maladaptive eating patterns.";\
+            why = "Moderate inputs do not trigger the critical IF-THEN rules of stress-eating pathology.";\
+            chain = ["Baseline Inputs", "Stable Homeostasis", "Routine Maintenance", "Autonomic Balance", "General Well-being", "Health Span Maintenance"];\
+        \}\
+\
+        // Display results\
+        document.getElementById('recText').innerText = rec;\
+        document.getElementById('bioExp').innerText = bio;\
+        document.getElementById('behLogic').innerText = logic;\
+        document.getElementById('whyText').innerText = why;\
+        \
+        const chainDiv = document.getElementById('mechanismChain');\
+        chainDiv.innerHTML = "";\
+        chain.forEach((step, index) => \{\
+            const span = document.createElement('span');\
+            span.className = 'chain-step';\
+            span.innerText = (index + 1) + ". " + step;\
+            chainDiv.appendChild(span);\
+        \});\
+        \
+        output.scrollIntoView(\{ behavior: 'smooth' \});\
+    \}\
+</script>\
 \
 </body>\
 </html>\
+\pard\pardeftab720\partightenfactor0
+\cf2 \
 }
